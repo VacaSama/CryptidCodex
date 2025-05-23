@@ -46,12 +46,18 @@ namespace CryptidCodex
             }
             else if (creature_dropDown.Text == "Goblin")
             {
+                Goblin goblin = new Goblin();
                 type_txtbox.Text = "Goblin";
                 origin_txtbox.Text = "Germany";
+                creatureName_txtbox.Text = goblin.Name;
+                rarity_txtbox.Text = goblin.Encounter;
             }
             else
             {
                 type_txtbox.Text = "Unknown Creature";
+                origin_txtbox.Text = "";
+                creatureName_txtbox.Text = "";
+                rarity_txtbox.Text = "";
             }
         }
 
@@ -75,21 +81,8 @@ namespace CryptidCodex
 
         private void clear_bttn_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Are you sure you want to clear the log?", "Clear Log",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
-            if (DialogResult == DialogResult.Yes)
-            {
-                // if the user clicks yes, then clear the log
-                User_Log.Items.Clear();
-                // show a message box to confirm to the user that the log was cleared
-                MessageBox.Show("Log Cleared");
-            }
-            else
-            {
-                // if the user clicks no, then do nothing
-                return;
-            }
+            // clear the user log
+            User_Log.Items.Clear();
         }
 
         private void exit_bttn_Click(object sender, EventArgs e)

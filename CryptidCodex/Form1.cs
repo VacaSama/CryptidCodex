@@ -38,8 +38,11 @@ namespace CryptidCodex
             }
             else if (creature_dropDown.Text == "Seraphim")
             {
+                Seraphim seraphim = new Seraphim();
                 type_txtbox.Text = "Seraphim";
                 origin_txtbox.Text = "Unknown";
+                creatureName_txtbox.Text = seraphim.Name;
+                rarity_txtbox.Text = seraphim.Encounter;
             }
             else if (creature_dropDown.Text == "Goblin")
             {

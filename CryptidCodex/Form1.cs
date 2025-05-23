@@ -29,8 +29,12 @@ namespace CryptidCodex
             }
             else if (creature_dropDown.Text == "Werewolf")
             {
+                Werewolf werewolf = new Werewolf();
                 type_txtbox.Text = "Werewolf";
                 origin_txtbox.Text = "Greece";
+                creatureName_txtbox.Text = werewolf.Name;
+                rarity_txtbox.Text = werewolf.Encounter;
+
             }
             else if (creature_dropDown.Text == "Seraphim")
             {
@@ -57,13 +61,37 @@ namespace CryptidCodex
 
             // add the creature to the listbox
             // if the string in each is not null or empty, then add the items to the Encounter log/ user log
-            if (!string.IsNullOrEmpty(creatureName) && !string.IsNullOrEmpty(creatureType) && 
+            if (!string.IsNullOrEmpty(creatureName) && !string.IsNullOrEmpty(creatureType) &&
                 !string.IsNullOrEmpty(creatureEncounter))
             {
                 string creatureInfo = $"{creatureName} - {creatureType} - {creatureEncounter}";
                 User_Log.Items.Add(creatureInfo);
             }
 
+        }
+
+        private void clear_bttn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Are you sure you want to clear the log?", "Clear Log",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (DialogResult == DialogResult.Yes)
+            {
+                // if the user clicks yes, then clear the log
+                User_Log.Items.Clear();
+                // show a message box to confirm to the user that the log was cleared
+                MessageBox.Show("Log Cleared");
+            }
+            else
+            {
+                // if the user clicks no, then do nothing
+                return;
+            }
+        }
+
+        private void exit_bttn_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

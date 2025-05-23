@@ -47,6 +47,7 @@
             rarity_txtbox = new TextBox();
             add_bttn = new Button();
             exit_bttn = new Button();
+            clear_bttn = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             creature_gBox.SuspendLayout();
@@ -185,7 +186,7 @@
             // EncounterLog_gBox
             // 
             EncounterLog_gBox.Controls.Add(User_Log);
-            EncounterLog_gBox.Location = new Point(24, 465);
+            EncounterLog_gBox.Location = new Point(24, 523);
             EncounterLog_gBox.Name = "EncounterLog_gBox";
             EncounterLog_gBox.Size = new Size(497, 255);
             EncounterLog_gBox.TabIndex = 14;
@@ -227,12 +228,24 @@
             exit_bttn.TabIndex = 18;
             exit_bttn.Text = "Exit";
             exit_bttn.UseVisualStyleBackColor = true;
+            exit_bttn.Click += exit_bttn_Click;
+            // 
+            // clear_bttn
+            // 
+            clear_bttn.Location = new Point(271, 471);
+            clear_bttn.Name = "clear_bttn";
+            clear_bttn.Size = new Size(214, 46);
+            clear_bttn.TabIndex = 19;
+            clear_bttn.Text = "Clear Log";
+            clear_bttn.UseVisualStyleBackColor = true;
+            clear_bttn.Click += clear_bttn_Click;
             // 
             // Codex_form
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1093, 790);
+            ClientSize = new Size(1093, 808);
+            Controls.Add(clear_bttn);
             Controls.Add(exit_bttn);
             Controls.Add(add_bttn);
             Controls.Add(rarity_txtbox);
@@ -274,5 +287,6 @@
         private TextBox rarity_txtbox;
         private Button add_bttn;
         private Button exit_bttn;
+        private Button clear_bttn;
     }
 }

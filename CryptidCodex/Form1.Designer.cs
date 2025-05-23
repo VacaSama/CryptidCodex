@@ -153,7 +153,7 @@
             creature_gBox.Controls.Add(Origin);
             creature_gBox.Location = new Point(545, 151);
             creature_gBox.Name = "creature_gBox";
-            creature_gBox.Size = new Size(462, 451);
+            creature_gBox.Size = new Size(515, 451);
             creature_gBox.TabIndex = 11;
             creature_gBox.TabStop = false;
             creature_gBox.Text = "Creature Description:";
@@ -161,10 +161,11 @@
             // StatsBox
             // 
             StatsBox.FormattingEnabled = true;
-            StatsBox.Location = new Point(151, 230);
+            StatsBox.Location = new Point(119, 230);
             StatsBox.Name = "StatsBox";
-            StatsBox.Size = new Size(240, 164);
+            StatsBox.Size = new Size(364, 164);
             StatsBox.TabIndex = 11;
+            StatsBox.SelectedIndexChanged += StatsBox_SelectedIndexChanged;
             // 
             // label5
             // 

@@ -26,8 +26,42 @@ namespace CryptidCodex
                 origin_txtbox.Text = "Translyvania";
                 creatureName_txtbox.Text = vampire.Name;
                 rarity_txtbox.Text = vampire.Encounter;
+
+                StatsBox.Items.Clear(); // clear old stats
+
+                if (vampire.Encounter == "Common")
+                {
+                    StatsBox.Items.Add("Strength: Notable");
+                    StatsBox.Items.Add("Damage Dealt: 75");
+                    StatsBox.Items.Add("Charm: Mild");
+                    StatsBox.Items.Add("Bloodlust: Low");
+                }
+                else if (vampire.Encounter == "Uncommon")
+                {
+                    StatsBox.Items.Add("Strength: Imposing");
+                    StatsBox.Items.Add("Damage Dealt: 450");
+                    StatsBox.Items.Add("Charm: Off-Putting");
+                    StatsBox.Items.Add("Bloodlust: Moderate");
+                }
+                else if (vampire.Encounter == "Rare")
+                {
+                    StatsBox.Items.Add("Strength: T-Terrifying");
+                    StatsBox.Items.Add("Damage Dealt: 7500");
+                    StatsBox.Items.Add("Charm: Alluring");
+                    StatsBox.Items.Add("Bloodlust: High");
+                }
+                else if (vampire.Encounter == "Epic")
+                {
+                    StatsBox.Items.Add("Strength: Godlike");
+                    StatsBox.Items.Add("Damage Dealt: 1100");
+                    StatsBox.Items.Add("Charm: Hypnotic"); 
+                    StatsBox.Items.Add("Abilities: Compulsion");
+                    StatsBox.Items.Add("Bloodlust: Unquenchable");
+                }
             }
-            else if (creature_dropDown.Text == "Werewolf")
+
+
+            if (creature_dropDown.Text == "Werewolf")
             {
                 Werewolf werewolf = new Werewolf();
                 type_txtbox.Text = "Werewolf";
@@ -35,29 +69,113 @@ namespace CryptidCodex
                 creatureName_txtbox.Text = werewolf.Name;
                 rarity_txtbox.Text = werewolf.Encounter;
 
+                StatsBox.Items.Clear(); // clear old stats
+                if (werewolf.Encounter == "Common")
+                {
+                    StatsBox.Items.Add("Strength: 110");
+                    StatsBox.Items.Add("Bite Force: 30 PSI");
+                    StatsBox.Items.Add("Lunar Bond: Nightly Shift");
+                    StatsBox.Items.Add("Bloodlust: Unquenchable");
+                }
+                else if (werewolf.Encounter == "Uncommon")
+                {
+                    StatsBox.Items.Add("Strength: Pack Juggarnaut");
+                    StatsBox.Items.Add("Bite Force: 170 PSI");
+                    StatsBox.Items.Add("Lunar Bond: Every Full Moon");
+                    StatsBox.Items.Add("Bloodlust: Frenzied");
+                }
+                else if (werewolf.Encounter == "Rare")
+                {
+                    StatsBox.Items.Add("Strength: Peltcrushing");
+                    StatsBox.Items.Add("Bite Force: 350 PSI");
+                    StatsBox.Items.Add("Lunar Bond: Every Full Moon");
+                    StatsBox.Items.Add("Bloodlust: Moderate");
+                }
+                else if (werewolf.Encounter == "Epic")
+                {
+                    StatsBox.Items.Add("Strength: Bone Breaker");
+                    StatsBox.Items.Add("Bite Force: 1200 PSI");
+                    StatsBox.Items.Add("Lunar Bond: Free Shift");
+                    StatsBox.Items.Add("Bloodlust: Dormant");
+                }
             }
-            else if (creature_dropDown.Text == "Seraphim")
+
+
+            if (creature_dropDown.Text == "Seraphim")
             {
                 Seraphim seraphim = new Seraphim();
                 type_txtbox.Text = "Seraphim";
                 origin_txtbox.Text = "Unknown";
                 creatureName_txtbox.Text = seraphim.Name;
                 rarity_txtbox.Text = seraphim.Encounter;
+
+                StatsBox.Items.Clear(); // clear old stats
+                if (seraphim.Encounter == "Common")
+                {
+                    StatsBox.Items.Add("Strength: 75");
+                    StatsBox.Items.Add("Speed: Average");
+                    StatsBox.Items.Add("Beauty: Churrub");
+                    StatsBox.Items.Add("Divine Power: Smite");
+                }
+                else if (seraphim.Encounter == "Uncommon")
+                {
+                    StatsBox.Items.Add("Strength: 225");
+                    StatsBox.Items.Add("Speed: Fast");
+                    StatsBox.Items.Add("Beauty: Luminous");
+                    StatsBox.Items.Add("Divine Power: Holy Shield");
+                }
+                else if (seraphim.Encounter == "Rare")
+                {
+                    StatsBox.Items.Add("Strength: 550");
+                    StatsBox.Items.Add("Speed: Light-Step");
+                    StatsBox.Items.Add("Beauty: Radiant");
+                    StatsBox.Items.Add("Divine Power: Blessing");
+                }
+                else if (seraphim.Encounter == "Epic")
+                {
+                    StatsBox.Items.Add("Strength: 950");
+                    StatsBox.Items.Add("Speed: Blinding");
+                    StatsBox.Items.Add("Beauty: Angel's Glow");
+                    StatsBox.Items.Add("Divine Power: Revive");
+                }
             }
-            else if (creature_dropDown.Text == "Goblin")
+            if (creature_dropDown.Text == "Goblin")
             {
                 Goblin goblin = new Goblin();
                 type_txtbox.Text = "Goblin";
                 origin_txtbox.Text = "Germany";
                 creatureName_txtbox.Text = goblin.Name;
                 rarity_txtbox.Text = goblin.Encounter;
-            }
-            else
-            {
-                type_txtbox.Text = "Unknown Creature";
-                origin_txtbox.Text = "";
-                creatureName_txtbox.Text = "";
-                rarity_txtbox.Text = "";
+
+                StatsBox.Items.Clear(); // clear old stats
+                if (goblin.Encounter == "Common")
+                {
+                    StatsBox.Items.Add("Cunning: Low Whits");
+                    StatsBox.Items.Add("Greed: Hoarder");
+                    StatsBox.Items.Add("Luck: Quite Unlucky");
+                    StatsBox.Items.Add("Beauty: Ugly");
+                }
+                else if (goblin.Encounter == "Uncommon")
+                {
+                    StatsBox.Items.Add("Cunning: Double Crosser");
+                    StatsBox.Items.Add("Greed: Hoarder");
+                    StatsBox.Items.Add("Luck: Fated");
+                    StatsBox.Items.Add("Beauty: Moss Face");
+                }
+                else if (goblin.Encounter == "Rare")
+                {
+                    StatsBox.Items.Add("Cunning: Trickster");
+                    StatsBox.Items.Add("Greed: Treasurelust");
+                    StatsBox.Items.Add("Luck: Chaos-Touched");
+                    StatsBox.Items.Add("Beauty: Warty");
+                }
+                else if (goblin.Encounter == "Epic")
+                {
+                    StatsBox.Items.Add("Cunning: Backstabber");
+                    StatsBox.Items.Add("Greed: Gold-Sick");
+                    StatsBox.Items.Add("Luck: Fortunate");
+                    StatsBox.Items.Add("Beauty: Mud-Charmer");
+                }
             }
         }
 
@@ -73,6 +191,8 @@ namespace CryptidCodex
             if (!string.IsNullOrEmpty(creatureName) && !string.IsNullOrEmpty(creatureType) &&
                 !string.IsNullOrEmpty(creatureEncounter))
             {
+                // the $ sign is used to format the string
+                // it will take the string and add the values of the variables to the string
                 string creatureInfo = $"{creatureName} - {creatureType} - {creatureEncounter}";
                 User_Log.Items.Add(creatureInfo);
             }
@@ -88,6 +208,10 @@ namespace CryptidCodex
         private void exit_bttn_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void StatsBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
         }
     }
 }

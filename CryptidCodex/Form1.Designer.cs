@@ -200,7 +200,7 @@
             // Encounter
             // 
             Encounter.AutoSize = true;
-            Encounter.Location = new Point(597, 73);
+            Encounter.Location = new Point(596, 122);
             Encounter.Name = "Encounter";
             Encounter.Size = new Size(127, 32);
             Encounter.TabIndex = 5;
@@ -208,7 +208,7 @@
             // 
             // rarity_txtbox
             // 
-            rarity_txtbox.Location = new Point(745, 71);
+            rarity_txtbox.Location = new Point(744, 120);
             rarity_txtbox.Name = "rarity_txtbox";
             rarity_txtbox.ReadOnly = true;
             rarity_txtbox.Size = new Size(200, 39);
@@ -246,7 +246,7 @@
             // 
             // creatureClear_bttn
             // 
-            creatureClear_bttn.Location = new Point(974, 70);
+            creatureClear_bttn.Location = new Point(973, 119);
             creatureClear_bttn.Name = "creatureClear_bttn";
             creatureClear_bttn.Size = new Size(196, 46);
             creatureClear_bttn.TabIndex = 1;

@@ -228,5 +228,15 @@ namespace CryptidCodex
             creature_dropDown.SelectedIndex = -1; // clear the dropdown selection
             pictureBox1.Image = null; // clear the image
         }
+        // this method will randomize the creature type, and everything else should fall into place
+        // yup... falls into place \(^o^)/
+        private void randomize_bttn_Click(object sender, EventArgs e)
+        {
+            // Randomly select a creature from the dropdown
+            // creaturedrop has a index of 0 to 3, vampire[0], werewolf[1], seraphim[2], goblin[3]
+            // /.SelectedIndex will select a random index from the dropdown list
+            // it will also update the image and randomly generate stats and in the Encounter it will
+            creature_dropDown.SelectedIndex = new Random().Next(creature_dropDown.Items.Count);
+        }
     }
 }

@@ -262,6 +262,7 @@
             randomize_bttn.TabIndex = 17;
             randomize_bttn.Text = "Randomize";
             randomize_bttn.UseVisualStyleBackColor = true;
+            randomize_bttn.Click += randomize_bttn_Click;
             // 
             // Codex_form
             // 

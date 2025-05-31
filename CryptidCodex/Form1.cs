@@ -26,6 +26,7 @@ namespace CryptidCodex
                 origin_txtbox.Text = "Translyvania";
                 creatureName_txtbox.Text = vampire.Name;
                 rarity_txtbox.Text = vampire.Encounter;
+                pictureBox1.Image = Properties.Resources.vampphoto; // Assuming you have a vampire image in resources
 
                 StatsBox.Items.Clear(); // clear old stats
 
@@ -54,7 +55,7 @@ namespace CryptidCodex
                 {
                     StatsBox.Items.Add("Strength: Godlike");
                     StatsBox.Items.Add("Damage Dealt: 1100");
-                    StatsBox.Items.Add("Charm: Hypnotic"); 
+                    StatsBox.Items.Add("Charm: Hypnotic");
                     StatsBox.Items.Add("Abilities: Compulsion");
                     StatsBox.Items.Add("Bloodlust: Unquenchable");
                 }
@@ -68,6 +69,7 @@ namespace CryptidCodex
                 origin_txtbox.Text = "Greece";
                 creatureName_txtbox.Text = werewolf.Name;
                 rarity_txtbox.Text = werewolf.Encounter;
+                pictureBox1.Image = Properties.Resources.werewolfphoto; // Assuming you have a werewolf image in resources
 
                 StatsBox.Items.Clear(); // clear old stats
                 if (werewolf.Encounter == "Common")
@@ -108,6 +110,7 @@ namespace CryptidCodex
                 origin_txtbox.Text = "Unknown";
                 creatureName_txtbox.Text = seraphim.Name;
                 rarity_txtbox.Text = seraphim.Encounter;
+                pictureBox1.Image = Properties.Resources.seraphoto; // Assuming you have a seraphim image in resources
 
                 StatsBox.Items.Clear(); // clear old stats
                 if (seraphim.Encounter == "Common")
@@ -146,6 +149,7 @@ namespace CryptidCodex
                 origin_txtbox.Text = "Germany";
                 creatureName_txtbox.Text = goblin.Name;
                 rarity_txtbox.Text = goblin.Encounter;
+                pictureBox1.Image = Properties.Resources.goblinphoto; // Assuming you have a goblin image in resources
 
                 StatsBox.Items.Clear(); // clear old stats
                 if (goblin.Encounter == "Common")
@@ -212,6 +216,11 @@ namespace CryptidCodex
 
         private void StatsBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

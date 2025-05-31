@@ -48,6 +48,7 @@
             add_bttn = new Button();
             exit_bttn = new Button();
             clear_bttn = new Button();
+            creatureClear_bttn = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             creature_gBox.SuspendLayout();
@@ -66,9 +67,10 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(17, 36);
+            pictureBox1.Location = new Point(12, 3);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(322, 200);
+            pictureBox1.Size = new Size(332, 271);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             // 
@@ -154,7 +156,7 @@
             creature_gBox.Location = new Point(545, 151);
             creature_gBox.Name = "creature_gBox";
             creature_gBox.Size = new Size(515, 451);
-            creature_gBox.TabIndex = 11;
+            creature_gBox.TabIndex = 6;
             creature_gBox.TabStop = false;
             creature_gBox.Text = "Creature Description:";
             // 
@@ -197,15 +199,15 @@
             // Encounter
             // 
             Encounter.AutoSize = true;
-            Encounter.Location = new Point(564, 74);
+            Encounter.Location = new Point(516, 73);
             Encounter.Name = "Encounter";
             Encounter.Size = new Size(127, 32);
-            Encounter.TabIndex = 15;
+            Encounter.TabIndex = 5;
             Encounter.Text = "Encounter:";
             // 
             // rarity_txtbox
             // 
-            rarity_txtbox.Location = new Point(712, 72);
+            rarity_txtbox.Location = new Point(664, 71);
             rarity_txtbox.Name = "rarity_txtbox";
             rarity_txtbox.ReadOnly = true;
             rarity_txtbox.Size = new Size(200, 39);
@@ -213,39 +215,50 @@
             // 
             // add_bttn
             // 
-            add_bttn.Location = new Point(665, 634);
+            add_bttn.Location = new Point(688, 634);
             add_bttn.Name = "add_bttn";
             add_bttn.Size = new Size(271, 46);
-            add_bttn.TabIndex = 17;
+            add_bttn.TabIndex = 3;
             add_bttn.Text = "Add Encounter";
             add_bttn.UseVisualStyleBackColor = true;
             add_bttn.Click += add_bttn_Click;
             // 
             // exit_bttn
             // 
-            exit_bttn.Location = new Point(665, 718);
+            exit_bttn.Location = new Point(688, 721);
             exit_bttn.Name = "exit_bttn";
             exit_bttn.Size = new Size(271, 46);
-            exit_bttn.TabIndex = 18;
+            exit_bttn.TabIndex = 4;
             exit_bttn.Text = "Exit";
             exit_bttn.UseVisualStyleBackColor = true;
             exit_bttn.Click += exit_bttn_Click;
             // 
             // clear_bttn
             // 
-            clear_bttn.Location = new Point(271, 471);
+            clear_bttn.Location = new Point(271, 458);
             clear_bttn.Name = "clear_bttn";
             clear_bttn.Size = new Size(214, 46);
-            clear_bttn.TabIndex = 19;
+            clear_bttn.TabIndex = 2;
             clear_bttn.Text = "Clear Log";
             clear_bttn.UseVisualStyleBackColor = true;
             clear_bttn.Click += clear_bttn_Click;
+            // 
+            // creatureClear_bttn
+            // 
+            creatureClear_bttn.Location = new Point(870, 70);
+            creatureClear_bttn.Name = "creatureClear_bttn";
+            creatureClear_bttn.Size = new Size(196, 46);
+            creatureClear_bttn.TabIndex = 1;
+            creatureClear_bttn.Text = "Clear Creature";
+            creatureClear_bttn.UseVisualStyleBackColor = true;
+            creatureClear_bttn.Click += button1_Click;
             // 
             // Codex_form
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1093, 808);
+            Controls.Add(creatureClear_bttn);
             Controls.Add(clear_bttn);
             Controls.Add(exit_bttn);
             Controls.Add(add_bttn);
@@ -289,5 +302,6 @@
         private Button add_bttn;
         private Button exit_bttn;
         private Button clear_bttn;
+        private Button creatureClear_bttn;
     }
 }

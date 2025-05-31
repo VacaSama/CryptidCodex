@@ -220,7 +220,13 @@ namespace CryptidCodex
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            creatureName_txtbox.Clear();
+            type_txtbox.Clear();
+            rarity_txtbox.Clear();
+            origin_txtbox.Clear();
+            StatsBox.Items.Clear(); // clear the stats box
+            creature_dropDown.SelectedIndex = -1; // clear the dropdown selection
+            pictureBox1.Image = null; // clear the image
         }
     }
 }

@@ -49,6 +49,7 @@
             exit_bttn = new Button();
             clear_bttn = new Button();
             creatureClear_bttn = new Button();
+            randomize_bttn = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             creature_gBox.SuspendLayout();
@@ -59,7 +60,7 @@
             // 
             creature_dropDown.FormattingEnabled = true;
             creature_dropDown.Items.AddRange(new object[] { "Vampire", "Werewolf", "Seraphim", "Goblin" });
-            creature_dropDown.Location = new Point(174, 70);
+            creature_dropDown.Location = new Point(148, 73);
             creature_dropDown.Name = "creature_dropDown";
             creature_dropDown.Size = new Size(242, 40);
             creature_dropDown.TabIndex = 0;
@@ -67,9 +68,9 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(12, 3);
+            pictureBox1.Location = new Point(32, 29);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(332, 271);
+            pictureBox1.Size = new Size(425, 316);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
@@ -77,9 +78,9 @@
             // panel1
             // 
             panel1.Controls.Add(pictureBox1);
-            panel1.Location = new Point(72, 151);
+            panel1.Location = new Point(60, 157);
             panel1.Name = "panel1";
-            panel1.Size = new Size(356, 274);
+            panel1.Size = new Size(493, 379);
             panel1.TabIndex = 2;
             // 
             // CreatureName
@@ -153,9 +154,9 @@
             creature_gBox.Controls.Add(Stats);
             creature_gBox.Controls.Add(type_txtbox);
             creature_gBox.Controls.Add(Origin);
-            creature_gBox.Location = new Point(545, 151);
+            creature_gBox.Location = new Point(593, 238);
             creature_gBox.Name = "creature_gBox";
-            creature_gBox.Size = new Size(515, 451);
+            creature_gBox.Size = new Size(515, 488);
             creature_gBox.TabIndex = 6;
             creature_gBox.TabStop = false;
             creature_gBox.Text = "Creature Description:";
@@ -165,14 +166,14 @@
             StatsBox.FormattingEnabled = true;
             StatsBox.Location = new Point(119, 230);
             StatsBox.Name = "StatsBox";
-            StatsBox.Size = new Size(364, 164);
+            StatsBox.Size = new Size(364, 228);
             StatsBox.TabIndex = 11;
             StatsBox.SelectedIndexChanged += StatsBox_SelectedIndexChanged;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(58, 70);
+            label5.Location = new Point(32, 73);
             label5.Name = "label5";
             label5.Size = new Size(110, 32);
             label5.TabIndex = 12;
@@ -183,15 +184,15 @@
             User_Log.FormattingEnabled = true;
             User_Log.Location = new Point(32, 60);
             User_Log.Name = "User_Log";
-            User_Log.Size = new Size(429, 164);
+            User_Log.Size = new Size(429, 228);
             User_Log.TabIndex = 13;
             // 
             // EncounterLog_gBox
             // 
             EncounterLog_gBox.Controls.Add(User_Log);
-            EncounterLog_gBox.Location = new Point(24, 523);
+            EncounterLog_gBox.Location = new Point(60, 626);
             EncounterLog_gBox.Name = "EncounterLog_gBox";
-            EncounterLog_gBox.Size = new Size(497, 255);
+            EncounterLog_gBox.Size = new Size(497, 327);
             EncounterLog_gBox.TabIndex = 14;
             EncounterLog_gBox.TabStop = false;
             EncounterLog_gBox.Text = "Encounter Log:";
@@ -199,7 +200,7 @@
             // Encounter
             // 
             Encounter.AutoSize = true;
-            Encounter.Location = new Point(516, 73);
+            Encounter.Location = new Point(597, 73);
             Encounter.Name = "Encounter";
             Encounter.Size = new Size(127, 32);
             Encounter.TabIndex = 5;
@@ -207,7 +208,7 @@
             // 
             // rarity_txtbox
             // 
-            rarity_txtbox.Location = new Point(664, 71);
+            rarity_txtbox.Location = new Point(745, 71);
             rarity_txtbox.Name = "rarity_txtbox";
             rarity_txtbox.ReadOnly = true;
             rarity_txtbox.Size = new Size(200, 39);
@@ -215,7 +216,7 @@
             // 
             // add_bttn
             // 
-            add_bttn.Location = new Point(688, 634);
+            add_bttn.Location = new Point(745, 767);
             add_bttn.Name = "add_bttn";
             add_bttn.Size = new Size(271, 46);
             add_bttn.TabIndex = 3;
@@ -225,7 +226,7 @@
             // 
             // exit_bttn
             // 
-            exit_bttn.Location = new Point(688, 721);
+            exit_bttn.Location = new Point(745, 854);
             exit_bttn.Name = "exit_bttn";
             exit_bttn.Size = new Size(271, 46);
             exit_bttn.TabIndex = 4;
@@ -235,7 +236,7 @@
             // 
             // clear_bttn
             // 
-            clear_bttn.Location = new Point(271, 458);
+            clear_bttn.Location = new Point(339, 574);
             clear_bttn.Name = "clear_bttn";
             clear_bttn.Size = new Size(214, 46);
             clear_bttn.TabIndex = 2;
@@ -245,7 +246,7 @@
             // 
             // creatureClear_bttn
             // 
-            creatureClear_bttn.Location = new Point(870, 70);
+            creatureClear_bttn.Location = new Point(974, 70);
             creatureClear_bttn.Name = "creatureClear_bttn";
             creatureClear_bttn.Size = new Size(196, 46);
             creatureClear_bttn.TabIndex = 1;
@@ -253,11 +254,21 @@
             creatureClear_bttn.UseVisualStyleBackColor = true;
             creatureClear_bttn.Click += button1_Click;
             // 
+            // randomize_bttn
+            // 
+            randomize_bttn.Location = new Point(413, 69);
+            randomize_bttn.Name = "randomize_bttn";
+            randomize_bttn.Size = new Size(150, 46);
+            randomize_bttn.TabIndex = 17;
+            randomize_bttn.Text = "Randomize";
+            randomize_bttn.UseVisualStyleBackColor = true;
+            // 
             // Codex_form
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1093, 808);
+            ClientSize = new Size(1207, 977);
+            Controls.Add(randomize_bttn);
             Controls.Add(creatureClear_bttn);
             Controls.Add(clear_bttn);
             Controls.Add(exit_bttn);
@@ -303,5 +314,6 @@
         private Button exit_bttn;
         private Button clear_bttn;
         private Button creatureClear_bttn;
+        private Button randomize_bttn;
     }
 }
